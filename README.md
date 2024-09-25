@@ -1,1 +1,2 @@
-# grade-calculator
+# ETHS Grade Calculator
+wip
