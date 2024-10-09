@@ -13,6 +13,39 @@
               </a>
             </div>
         </nav>
-        https://getbootstrap.com/docs/5.3/forms/overview/#overview
+        <div class="row m-2">
+          <div class="col-lg-6">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Quarter 1 Grade</label>
+              <input type="number" min="50" max="100" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">(as a percentage)</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Quarter 2 Grade</label>
+              <input type="number" min='50' max='100'class="form-control" id="exampleInputPassword1">
+              <div id="emailHelp" class="form-text">(as a percentage)</div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Final Exam Grade (%)</th>
+                  <th scope="col">Semester Grade (and %)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">50%</th>
+                  <td>50% - F</td>
+                </tr>
+                <tr>
+                  <th scope="row">60%</th>
+                  <td>60% - D</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
     </body>
 </html>
