@@ -17,12 +17,12 @@
           <div class="col-lg-6">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Quarter 1 Grade</label>
-              <input type="number" min="50" max="100" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="number" min="50" max="100" required class="form-control" id="Quarter1Grade" onchange="onChange()" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">(as a percentage)</div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Quarter 2 Grade</label>
-              <input type="number" min='50' max='100'class="form-control" id="exampleInputPassword1">
+              <input type="number" min='50' max='100'class="form-control" onchange="onChange()" id="Quarter2Grade">
               <div id="emailHelp" class="form-text">(as a percentage)</div>
             </div>
           </div>
@@ -37,15 +37,36 @@
               <tbody>
                 <tr>
                   <th scope="row">50%</th>
-                  <td>50% - F</td>
+                  <td id="50">50% - F</td>
                 </tr>
                 <tr>
                   <th scope="row">60%</th>
-                  <td>60% - D</td>
+                  <td id="60">60% - D</td>
+                </tr>
+                <tr>
+                  <th scope="row">70%</th>
+                  <td id="70">50% - C</td>
+                </tr>
+                <tr>
+                  <th scope="row">80%</th>
+                  <td id="80">50% - B</td>
+                </tr>
+                <tr>
+                  <th scope="row">90%</th>
+                  <td id="90">50% - A-</td>
+                </tr>
+                <tr>
+                  <th scope="row">100%</th>
+                  <td id="100">50% - A</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="number" id="custom_input" onchange="onChange()" min="50" max="100">%</th>
+                  <td id="custom_result">50% - A</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
+        <script src="/assets/app.js"></script>
     </body>
 </html>
