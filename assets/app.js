@@ -1,11 +1,6 @@
 let q1 = document.getElementById("Quarter1Grade")
-if(q1.value > 100){
-    q1.value = 100
-}
 let q2 = document.getElementById("Quarter2Grade")
-if(q2.value > 100){
-    q2.value = 100
-}
+
 let output = document.getElementById("output")
 let input_box = document.getElementById("custom_input")
 
@@ -56,10 +51,35 @@ function generateString(final_grade){
 }
 
 function onChange(){
+    let quarter1 = parseInt(q1.value)
+    let quarter2 = parseInt(q2.value)
+    let final = parseInt(input_box.value)
+    if(quarter1 < 50){
+        q1.value = 50
+    }
+    else if(quarter1 > 100){
+        q1.value = 100
+    }
+    if(quarter2 < 50){
+        q2.value = 50
+    }
+    else if(quarter2 > 100){
+        q2.value = 100
+    }
+    if(final < 0){
+        input_box.value = 0
+    }
+    else if(final > 100){
+        input_box.value = 100
+    }
     table_rows.forEach(final_grade => {
         let table_row = document.getElementById(final_grade.toString())
         table_row.innerHTML = generateString(final_grade) 
     });
     let table_row = document.getElementById("custom_result")
     table_row.innerHTML = generateString(input_box.value)
+}
+
+function numberValidation(event){
+    return !(event.key == "-" || event.key == "e" || event.key == "+");
 }

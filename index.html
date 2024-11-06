@@ -18,12 +18,12 @@
           <div class="col-lg-6">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Quarter 1 Grade</label>
-              <input type="number" min="50" max="100" required class="form-control" id="Quarter1Grade" onchange="onChange()" aria-describedby="emailHelp">
+              <input type="number" min="50" max="100" required class="form-control" id="Quarter1Grade" onchange="onChange()" onkeydown="return numberValidation(event)" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">(as a percentage)</div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Quarter 2 Grade</label>
-              <input type="number" min='50' max='100'class="form-control" onchange="onChange()" id="Quarter2Grade">
+              <input type="number" min='50' max='100'class="form-control" onchange="onChange()" onkeydown="return numberValidation(event)" id="Quarter2Grade">
               <div id="emailHelp" class="form-text">(as a percentage)</div>
             </div>
           </div>
@@ -69,8 +69,8 @@
                   <td id="100">100% - A</td>
                 </tr>
                 <tr>
-                  <th scope="row"><input type="number" id="custom_input" onchange="onChange()" min="50" max="100">%</th>
-                  <td id="custom_result">50% - A</td>
+                  <th scope="row"><input type="number" id="custom_input" onchange="onChange()" onkeydown="return numberValidation(event)" min="0" max="100">%</th>
+                  <td id="custom_result">50% - F</td>
                 </tr>
               </tbody>
             </table>
