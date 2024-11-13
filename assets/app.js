@@ -94,5 +94,5 @@ function numberValidation(event){
     addBorder(q1)
     addBorder(q2)
     addBorder(input_box)
-    return (event.key == "." || event.key == "Backspace" || event.key == "Delete" || event.ctrlKey ||!isNaN(event.key));
+    return (event.key == "." || event.key == "Backspace" || event.key == "Delete" || event.metaKey || event.ctrlKey || !isNaN(event.key));
 }
