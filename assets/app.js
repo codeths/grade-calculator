@@ -72,6 +72,7 @@ function onChange(){
     else if(final > 100){
         input_box.value = 100
     }
+    numberValidation({key: ""})
     table_rows.forEach(final_grade => {
         let table_row = document.getElementById(final_grade.toString())
         table_row.innerHTML = generateString(final_grade) 
@@ -80,6 +81,18 @@ function onChange(){
     table_row.innerHTML = generateString(input_box.value)
 }
 
+function addBorder(element){
+    if(element.value.length <= 0){
+        element.classList.add("border", "border-danger")
+    }
+    else{
+        element.classList.remove("border-danger", "border")
+    }
+}
+
 function numberValidation(event){
-    return !(event.key == "-" || event.key == "e" || event.key == "+");
+    addBorder(q1)
+    addBorder(q2)
+    addBorder(input_box)
+    return (event.key == "." || !isNaN(event.key));
 }
